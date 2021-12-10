@@ -45,11 +45,11 @@ function generatePassword() {
     );
   }
   // If user still does not enter a valid number, Generator stops
+  let halt =
+    "No password will be generated unless you enter a number between 8 and 128";
   if (passLength < 8 || passLength > 128) {
-    function stopGen() {
-      let halt = "No Password - Enter a number between 8 and 128";
-    }
-    return halt;
+    function stopGen() {}
+    return alert(halt);
   }
 
   // Creates string of all available characters in each case (upper, lower, number, and special) in order to concat with those strings after prompts
