@@ -25,9 +25,8 @@ function writePassword() {
 }
 
 // Entire function start to generate a random password - created strings and prompts within below
-function generatePassword() {
-  let finalPass = "";
 
+function generatePassword() {
   // Creating Strings of all characters that can be used: Numbers, lowercase, uppercase, and special characters
   let numChar = "1234567890";
   let lowerCaseChar = "abcdefghijklmnopqrstuvwyz";
@@ -92,6 +91,9 @@ function generatePassword() {
       "Must select at least one category of number, lowercase, uppercase, or special character."
     );
   }
+
+  //Set variable to return
+  let finalPass = "";
 
   // Gets characters randomly from stringChar collection after all prompts have been answered
   for (let i = 0; i <= passLength; i++) {
